@@ -8,13 +8,32 @@ a {
     text-decoration: none;
 }
 
-ul {
+ul,
+ol {
     list-style-type: none;
+    margin: 0;
+    padding-left: 0;
 }
 
 button {
     cursor: pointer;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+}
+
+/* ====================== pseodoclasses ============================= */
 
 a:hover,
 a:focus {
@@ -35,7 +54,32 @@ button:focus {
     background-color: #404bbf;
 }
 
-.logo-header {
+/* ====================== classes ============================= */
+/* ====================== header ============================= */
+
+.container {
+    max-width: 1440px;
+    padding-left: 156px;
+    padding-right: 156px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pageheader .container {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e7e9fc;
+    align-items: center;
+}
+
+.pageheader-container-navigation {
+    display: flex;
+    gap: 76px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.pageheader-container-navigation-logo {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -43,131 +87,228 @@ button:focus {
     color: #4d5ae5;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    padding: 24px 0;
+    display: block;
 }
 
 .inception-logo {
     color: #2e2f42;
 }
 
-.nav-link {
+.pageheader-container-navigation-list {
+    display: flex;
+    gap: 40px;
+}
+.pageheader-container-navigation-list li {
+    width: calc((100% - 80px) / 3);
+}
+
+.pageheader-container-navigation-list-item-link {
     color: #2e2f42;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    padding: 24px 0;
+    display: block;
 }
 
-.contacts-link {
+.pageheader-container-address {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     font-style: normal;
 }
 
-.link-adress {
-    color: currentColor;
+.pageheader-container-address-list {
+    display: flex;
+    gap: 40px;
 }
+
+.pageheader-container-address-list li {
+    width: calc((100% - 40px) / 2);
+}
+
+.pageheader-container-address-list-item-link {
+    color: currentColor;
+    padding: 24px 0;
+    display: block;
+}
+
+/* ====================== hero ============================= */
 
 .hero {
     background-color: #2e2f42;
     color: #ffffff;
+    padding: 188px 0;
 }
 
-.hero-header {
+.hero-container-title {
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
     text-align: center;
+    max-width: 496px;
+    margin: 0 auto 48px;
 }
 
-.hero-button {
+.hero-container-button {
     background-color: #4d5ae5;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     color: #ffffff;
     letter-spacing: 0.04em;
+    display: block;
+    margin: 0 auto;
+    padding: 16px 32px;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    border: 0px;
 }
 
-.advantages {
-    letter-spacing: 0.02em;
+/* ====================== Advantages ============================= */
+.section-padding {
+    padding: 120px 0;
 }
 
-.advantages-title {
+.advantages-container-title {
+    display: none;
+}
+
+.advantages-container-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+.advantages-container-list li {
+    width: calc((100% - 24px * 3) / 4);
+}
+
+.advantages-container-list-item-title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     color: #2e2f42;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 
-.advantages-text {
+.advantages-container-list-item-text {
     font-size: 16px;
     line-height: 1.5;
 }
+
+/* ====================== team ============================= */
 
 .team {
     background-color: #f4f4fd;
-    letter-spacing: 0.02em;
 }
 
-.team-title {
+.team-container-title {
     color: #2e2f42;
     font-size: 36px;
     line-height: 1.11;
     text-align: center;
     text-transform: capitalize;
     letter-spacing: 0.02em;
+    margin-bottom: 72px;
 }
 
-.team-card {
+.team-container-list {
+    display: flex;
+    gap: 24px;
+}
+
+.team-container-list li {
+    width: calc((100% - 24px * 3) / 4);
+}
+
+.team-container-list-item {
     background-color: #ffffff;
+    padding-bottom: 32px;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16),
+        0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
-.team-card-title {
+.team-container-list-item-image {
+    margin-bottom: 32px;
+}
+
+.team-container-list-item-title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     color: #2e2f42;
     letter-spacing: 0.02em;
+    text-align: center;
+    margin-bottom: 8px;
 }
 
-.team-card-text {
+.team-container-list-item-text {
     font-size: 16px;
     line-height: 1.5;
+    text-align: center;
 }
 
-.portfolio {
-    letter-spacing: 0.02em;
-}
+/* ====================== portfolio ============================= */
 
-.portfolio-title {
+.portfolio-container-title {
     font-size: 36px;
     line-height: 1.11;
     color: #2e2f42;
     text-align: center;
     text-transform: capitalize;
     letter-spacing: 0.02em;
+    margin-bottom: 72px;
 }
 
-.portfolio-card-title {
+.portfolio-container-list {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.portfolio-container-list-item {
+    width: calc((100% - 48px) / 3);
+}
+
+.portfolio-container-list-item-wrapper {
+    border-bottom: 1px solid #e7e9fc;
+    border-left: 1px solid #e7e9fc;
+    border-right: 1px solid #e7e9fc;
+    padding: 32px 16px;
+}
+.portfolio-container-list-item-title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     color: #2e2f42;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 
-.portfolio-card-text {
+.portfolio-container-list-item-text {
     font-size: 16px;
     line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
-.footer {
+/* ====================== footer ============================= */
+
+.pagefooter {
     background-color: #2e2f42;
+    padding: 100px;
 }
 
-.logo-footer {
+.pagefooter .container {
+}
+
+.footer-container-logo {
+    display: block;
     color: #4d5ae5;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
@@ -175,15 +316,17 @@ button:focus {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    margin-bottom: 16px;
 }
 
 .logo-end {
     color: #f4f4fd;
 }
 
-.footer-text {
+.footer-container-text {
     font-size: 16px;
     line-height: 1.5;
     color: #f4f4fd;
     letter-spacing: 0.02em;
+    max-width: 264px;
 }
